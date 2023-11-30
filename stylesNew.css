@@ -1,0 +1,51 @@
+
+/* Everything is border-box and has zero padding/margin */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Set height to 100% to allow child divs to span entire height of page */
+body, html {
+    height: 100%;
+}
+
+/* Flex container for the sidebar and main form - allows main form to take up more space */
+.flex-container {
+    height: 100%;
+    width: 100%;
+    border: 1px solid green;
+    display: flex;
+}
+
+/* Relatively position sidebar to allow Odin banner and photo credits to be placed over background image */
+.sidebar {
+    position: relative;
+    height: 100%;
+    border: 1px solid blue;
+    flex: 1;
+}
+
+.leafy {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Main form has flex display to allow children (header, form-fields, submit) to sit properly */
+.sign-up {
+    height: 100%;
+    border: 1px solid red;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+header,
+.form-fields,
+.submit {
+    border: 1px solid orange;
+    flex: 1;
+}
